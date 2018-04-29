@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build" : "webpack"
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,6 +18,12 @@
   },
   "homepage": "https://github.com/nitish24p/webpack-101#readme",
   "dependencies": {
+    "@babel/core": "7.0.0-beta.46",
+    "@babel/preset-env": "7.0.0-beta.46",
+    "@babel/preset-react": "7.0.0-beta.46",
+    "babel-loader": "^8.0.0-beta",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2",
     "webpack": "4.6.0"
   },
   "devDependencies": {

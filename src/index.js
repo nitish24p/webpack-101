@@ -8,6 +8,9 @@ const App = () => (
     <Heading>
       This is a heading.
     </Heading>
+    <Heading>
+      This is a another heading.
+    </Heading>
   </div>
 )
 

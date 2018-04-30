@@ -1,5 +1,14 @@
-const foo = require('./foo');
-const bar = require('./bar');
+import React from 'react';
+import { render } from 'react-dom';
 
-foo();
-bar();
+import Heading from './Heading';
+
+const App = () => (
+  <div>
+    <Heading>
+      This is a heading.
+    </Heading>
+  </div>
+)
+
+render(<App />, document.querySelector('.root'));

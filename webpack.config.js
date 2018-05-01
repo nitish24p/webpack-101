@@ -2,7 +2,9 @@ process.env.NODE_ENV = 'development';
 
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 const fs = require('fs');
+const webpack = require('webpack');
 
 /*
 * Helper function 
@@ -58,6 +60,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: true,
       template: resolveApp('public/index.html')
-    })
+    }),
+    new webpack.DefinePlugin({
+      FOO: JSON.stringify(true)
+    }),
+    new CleanWebpackPlugin(['./public/dist'], {
+      verbose: true,
+      dry: false,
+      root: path.join(__dirname),
+    }),
   ]
 }

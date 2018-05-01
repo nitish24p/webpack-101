@@ -1,7 +1,13 @@
 const path = require('path');
-const MyPlugin = require('./MyPlugin.js');
-
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const fs = require('fs');
 process.env.NODE_ENV = 'development';
+
+/*
+* Helper function 
+*/
+const appDirectory = fs.realpathSync(process.cwd());
+const resolveApp = relativePath => path.resolve(appDirectory, relativePath);
 
 module.exports = {
   entry: {
@@ -10,7 +16,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public', 'dist'),
     filename: 'bundle.js',
-    publicPath: '/dist/'
   },
   mode: 'development',
   module: {
@@ -48,6 +53,9 @@ module.exports = {
     ]
   },
   plugins: [
-    new MyPlugin()
+    new HtmlWebpackPlugin({
+      inject: true,
+      template: resolveApp('public/index.html')
+    })
   ]
 }

@@ -1,4 +1,5 @@
 const path = require('path');
+const MyPlugin = require('./MyPlugin.js');
 
 process.env.NODE_ENV = 'development';
 
@@ -45,5 +46,8 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new MyPlugin()
+  ]
 }

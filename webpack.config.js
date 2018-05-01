@@ -1,7 +1,8 @@
+process.env.NODE_ENV = 'development';
+
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const fs = require('fs');
-process.env.NODE_ENV = 'development';
 
 /*
 * Helper function 
@@ -39,6 +40,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+       
       },
       {
         test: /\.(png|jpg|gif|svg|jpeg)/,

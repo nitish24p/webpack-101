@@ -9,6 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'public', 'dist'),
     filename: 'bundle.js',
+    publicPath: '/dist/'
   },
   mode: 'development',
   module: {
@@ -25,6 +26,24 @@ module.exports = {
         },
         exclude: /node_modules/
       },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(png|jpg|gif|svg|jpeg)/,
+        use: {
+          loader: 'url-loader',
+          options: { 
+              limit: 8000, // Convert images < 8kb to base64 strings
+              name: '[hash]-[name].[ext]'
+          }
+        }
+      }
     ]
   }
 }

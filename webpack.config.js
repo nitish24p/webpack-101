@@ -18,7 +18,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'public', 'dist'),
-    filename: 'bundle.js',
+    filename: '[name].[hash:8].js',
   },
   mode: 'development',
   module: {
@@ -50,7 +50,7 @@ module.exports = {
           loader: 'url-loader',
           options: { 
               limit: 8000, // Convert images < 8kb to base64 strings
-              name: '[hash]-[name].[ext]'
+              name: '[name]-[hash:8].[ext]'
           }
         }
       }

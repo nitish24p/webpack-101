@@ -22,7 +22,7 @@ module.exports = {
     new CleanWebpackPlugin(['./public/dist'], {
       verbose: true,
       dry: false,
-      root: path.join(__dirname),
+      root: path.join(__dirname, '..'),
     }),
   ]
 }

@@ -10,6 +10,10 @@ import img from './images/webpack.png'
 const App = () => (
   <div>
     <Banner imageSource={img} bannerText='Lets Learn Webpack'/>
+    <Heading>
+      The environment is {process.env.ENVIRONMENT}
+    </Heading>
+
     <div className='header-container'>
       <Heading>
         This is a heading.

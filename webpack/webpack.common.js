@@ -30,6 +30,17 @@ module.exports = function(env) {
       new Dotenv({
         path: pathToEnvFile,
       }),
-    ]
+    ],
+    optimization: {
+      splitChunks: {
+          cacheGroups: {
+              commons: {
+                  test: /[\\/]node_modules[\\/]/,
+                  name: "vendors",
+                  chunks: "all"
+              }
+          }
+      }
+    }
   }
 }

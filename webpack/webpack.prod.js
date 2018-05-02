@@ -64,7 +64,10 @@ module.exports = function (env) {
     plugins: [
       new ExtractTextPlugin('[name].[hash:8].css'),
       new webpack.DefinePlugin({
-        __DEV__: JSON.stringify(false)
+        __DEV__: JSON.stringify(false),
+        'process.env': {
+          'NODE_ENV': JSON.stringify('production')
+        }
       }),
     ]
   });

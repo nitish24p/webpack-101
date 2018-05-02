@@ -1,0 +1,34 @@
+{
+  "name": "webpack-101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitish24p/webpack-101.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitish24p/webpack-101/issues"
+  },
+  "homepage": "https://github.com/nitish24p/webpack-101#readme",
+  "dependencies": {
+    "babel-core": "6.26.3",
+    "babel-loader": "7.1.4",
+    "babel-preset-env": "1.6.1",
+    "babel-preset-flow": "6.23.0",
+    "babel-preset-react": "6.24.1",
+    "babel-preset-react-app": "3.1.1",
+    "react": "16.3.2",
+    "react-dom": "16.3.2",
+    "webpack": "4.6.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "2.0.15"
+  }
+}

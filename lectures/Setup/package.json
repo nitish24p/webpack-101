@@ -1,0 +1,26 @@
+{
+  "name": "webpack-101",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build" : "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nitish24p/webpack-101.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nitish24p/webpack-101/issues"
+  },
+  "homepage": "https://github.com/nitish24p/webpack-101#readme",
+  "dependencies": {
+    "webpack": "4.6.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "2.0.15"
+  }
+}

@@ -45,7 +45,8 @@ module.exports = function(env) {
     devServer: {
       compress: true,
       hot: true,
-      open: true
+      open: true,
+      historyApiFallback: true
     },
     plugins: [
       new webpack.DefinePlugin({

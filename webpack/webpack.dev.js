@@ -1,10 +1,10 @@
 process.env.NODE_ENV = 'development';
-
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const webpack = require('webpack');
 
 module.exports = merge(common, {
+  devtool: 'source-map',
   mode: 'development',
   module: {
     rules: [
@@ -41,9 +41,16 @@ module.exports = merge(common, {
       }
     ]
   },
+  devServer: {
+    compress: true,
+    hot: true,
+    open: true
+  },
   plugins: [
     new webpack.DefinePlugin({
       __DEV__: JSON.stringify(true)
     }),
+    new webpack.NamedModulesPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ]
 });

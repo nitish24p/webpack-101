@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --config ./webpack/webpack.dev.js --watch",
-    "start": "webpack-dev-server --debug --config ./webpack/webpack.dev.js",
-    "build": "webpack --config ./webpack/webpack.prod.js"
+    "dev": "webpack --config ./webpack/webpack.dev.js --env dev --watch",
+    "start": "webpack-dev-server --debug --config ./webpack/webpack.dev.js --env dev",
+    "build": "webpack --config ./webpack/webpack.prod.js --env prod"
   },
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "babel-preset-react-app": "3.1.1",
     "clean-webpack-plugin": "0.1.19",
     "css-loader": "0.28.11",
+    "dotenv-webpack": "1.5.5",
     "extract-text-webpack-plugin": "4.0.0-beta.0",
     "file-loader": "1.1.11",
     "node-sass": "4.9.0",
